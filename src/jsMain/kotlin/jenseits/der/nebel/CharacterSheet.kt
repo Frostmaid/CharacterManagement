@@ -49,31 +49,33 @@ fun TagConsumer<HTMLElement>.createAttributeSection() {
 private fun DIV.attributeCheckbox(id: String, labelName: String) {
   div {
     classes = setOf("field is-horizontal")
-    label {
-      classes = setOf("checkbox")
-      htmlFor = id
-      +labelName
-
-      input {
-        this.id = "${id}1"
-        type = InputType.checkBox
+    div {
+      classes = setOf("field-label is-normal")
+      label {
+        classes = setOf("checkbox label")
+        htmlFor = id
+        +labelName
       }
-      input {
-        this.id = "${id}2"
-        type = InputType.checkBox
-      }
-      input {
-        this.id = "${id}3"
-        type = InputType.checkBox
-      }
-      input {
-        this.id = "${id}4"
-        type = InputType.checkBox
-      }
-      input {
-        this.id = "${id}5"
-        type = InputType.checkBox
-      }
+    }
+    input {
+      this.id = "${id}1"
+      type = InputType.checkBox
+    }
+    input {
+      this.id = "${id}2"
+      type = InputType.checkBox
+    }
+    input {
+      this.id = "${id}3"
+      type = InputType.checkBox
+    }
+    input {
+      this.id = "${id}4"
+      type = InputType.checkBox
+    }
+    input {
+      this.id = "${id}5"
+      type = InputType.checkBox
     }
   }
 }
@@ -84,6 +86,7 @@ private fun DIV.groupWithLabelAndInputField(id: String, labelName: String) {
     div {
       classes = setOf("field-label is-normal")
       label {
+        classes = setOf("label")
         htmlFor = id
         +labelName
       }
