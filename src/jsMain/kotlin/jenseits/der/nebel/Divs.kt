@@ -1,12 +1,10 @@
 package jenseits.der.nebel
 
-import kotlinx.html.DIV
-import kotlinx.html.InputType
-import kotlinx.html.id
-import kotlinx.html.input
+import kotlinx.html.*
 
 fun DIV.checkBox(id: String) {
   input {
+    classes = setOf("checkbox")
     this.id = id
     type = InputType.checkBox
   }

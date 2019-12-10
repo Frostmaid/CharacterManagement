@@ -1,5 +1,7 @@
 package jenseits.der.nebel
 
+import kotlinx.html.classes
+import kotlinx.html.div
 import kotlinx.html.dom.append
 import kotlin.browser.document
 
@@ -9,7 +11,16 @@ fun main() {
   document.getElementById("app")
     ?.also { it.innerHTML = "" }
     ?.append {
-      createGeneralSection()
-      createAttributeSection()
+      div {
+        classes = setOf("columns")
+        div {
+          classes = setOf("column")
+          createGeneralSection()
+        }
+        div {
+          classes = setOf("column")
+          createAttributeSection()
+        }
+      }
     }
 }
