@@ -57,26 +57,11 @@ private fun DIV.attributeCheckbox(id: String, labelName: String) {
         +labelName
       }
     }
-    input {
-      this.id = "${id}1"
-      type = InputType.checkBox
-    }
-    input {
-      this.id = "${id}2"
-      type = InputType.checkBox
-    }
-    input {
-      this.id = "${id}3"
-      type = InputType.checkBox
-    }
-    input {
-      this.id = "${id}4"
-      type = InputType.checkBox
-    }
-    input {
-      this.id = "${id}5"
-      type = InputType.checkBox
-    }
+    checkBox("${id}1")
+    checkBox("${id}2")
+    checkBox("${id}3")
+    checkBox("${id}4")
+    checkBox("${id}5")
   }
 }
 
