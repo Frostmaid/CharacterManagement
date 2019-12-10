@@ -25,25 +25,27 @@ fun TagConsumer<HTMLElement>.createAttributeSection() {
     +"Attribute (Stufe x 20) Start-EP: 920"
   }
   div {
-    classes = setOf("columns")
+    classes = setOf("container")
     div {
-      classes = setOf("column")
-      attributeCheckbox("magic", "Magie")
-      attributeCheckbox("charisma", "Charisma")
-      attributeCheckbox("intelligence", "Intelligenz")
-      attributeCheckbox("reflexes", "Reflexe")
-      attributeCheckbox("willpower", "Willenskraft")
-    }
-    div {
-      classes = setOf("column")
-      attributeCheckbox("strength", "Körperkraft")
-      attributeCheckbox("agility", "Geschicklichkeit")
-      attributeCheckbox("perception", "Wahrnehmung")
-      attributeCheckbox("sleightOfHand", "Fingerfertigkeit")
-      attributeCheckbox("toughness", "Zähigkeit")
+      classes = setOf("columns")
+      div {
+        classes = setOf("column")
+        attributeCheckbox("magic", "Magie")
+        attributeCheckbox("charisma", "Charisma")
+        attributeCheckbox("intelligence", "Intelligenz")
+        attributeCheckbox("reflexes", "Reflexe")
+        attributeCheckbox("willpower", "Willenskraft")
+      }
+      div {
+        classes = setOf("column")
+        attributeCheckbox("strength", "Körperkraft")
+        attributeCheckbox("agility", "Geschicklichkeit")
+        attributeCheckbox("perception", "Wahrnehmung")
+        attributeCheckbox("sleightOfHand", "Fingerfertigkeit")
+        attributeCheckbox("toughness", "Zähigkeit")
+      }
     }
   }
-
 }
 
 private fun DIV.attributeCheckbox(id: String, labelName: String) {
