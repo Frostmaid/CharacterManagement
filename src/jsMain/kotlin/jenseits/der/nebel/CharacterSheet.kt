@@ -3,15 +3,36 @@ package jenseits.der.nebel
 import kotlinx.html.*
 import org.w3c.dom.HTMLElement
 
-fun TagConsumer<HTMLElement>.createGeneralSection() {
+fun TagConsumer<HTMLElement>.createCharacterCreationForm() {
+  h1 {
+    classes = setOf("title has-text-centered")
+    +"Charaktererschaffung"
+  }
+  div {
+    classes = setOf("columns")
+    div {
+      classes = setOf("column")
+      createGeneralSection()
+    }
+    div {
+      classes = setOf("column")
+      createAttributeSection()
+    }
+  }
+  div {
+    createTalentSection()
+  }
+}
+
+private fun TagConsumer<HTMLElement>.createGeneralSection() {
   h2 {
-    classes = setOf("subtitle")
+    classes = setOf("subtitle has-text-centered")
     +"Allgemeines"
   }
 
   div {
     classes = setOf("container")
-    groupWithLabelAndInputField("characterName", "Charaktername")
+    groupWithLabelAndInputField("characterName", "Name")
     groupWithLabelAndInputField("countryOfOrigin", "Herkunft")
     groupWithLabelAndInputField("profession", "Beruf")
     groupWithLabelAndInputField("status", "Status")
@@ -19,9 +40,9 @@ fun TagConsumer<HTMLElement>.createGeneralSection() {
 
 }
 
-fun TagConsumer<HTMLElement>.createAttributeSection() {
+private fun TagConsumer<HTMLElement>.createAttributeSection() {
   h2 {
-    classes = setOf("subtitle")
+    classes = setOf("subtitle has-text-centered")
     +"Attribute (Stufe x 20) Start-EP: 920"
   }
   div {
@@ -43,6 +64,37 @@ fun TagConsumer<HTMLElement>.createAttributeSection() {
         attributeCheckbox("perception", "Wahrnehmung")
         attributeCheckbox("sleightOfHand", "Fingerfertigkeit")
         attributeCheckbox("toughness", "Zähigkeit")
+      }
+    }
+  }
+}
+
+private fun TagConsumer<HTMLElement>.createTalentSection() {
+  h2 {
+    classes = setOf("subtitle has-text-centered")
+    +"Talente"
+  }
+  table {
+    classes = setOf("table is-bordered is-striped")
+    thead {
+      tr {
+        th { +"Aktive Talente" }
+        th { +"Bezugsattribute" }
+        th { +"Wert x 15" }
+      }
+    }
+    tbody {
+      tr {
+        td { +"Lorem ipsum" }
+        td { +"Weisheit" }
+        td {
+          div {
+            classes = setOf("has-text-centered")
+            checkBox("talent1")
+            checkBox("talent2")
+            checkBox("talent3")
+          }
+        }
       }
     }
   }

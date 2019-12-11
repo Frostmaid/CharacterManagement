@@ -13,25 +13,14 @@ fun main() {
     ?.also { it.innerHTML = "" }
     ?.append {
       section {
-        classes = setOf("main-content columns is-fullheight")
+        classes = setOf("main-content columns is-fullheight has-background-white-ter")
         createMenu()
 
         div {
-          classes = setOf("container column is-10")
+          classes = setOf("column is-11")
           div {
             classes = setOf("section")
-
-            div {
-              classes = setOf("columns")
-              div {
-                classes = setOf("column")
-                createGeneralSection()
-              }
-              div {
-                classes = setOf("column")
-                createAttributeSection()
-              }
-            }
+            createCharacterCreationForm()
           }
         }
       }
