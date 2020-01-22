@@ -1,3 +1,7 @@
 .gradle
 .idea
 *.iml
+
+*/build
+/build
+/aws/node_modules

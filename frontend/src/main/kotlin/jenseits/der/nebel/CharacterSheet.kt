@@ -1,6 +1,7 @@
 package jenseits.der.nebel
 
 import kotlinx.html.*
+import kotlinx.html.js.onClickFunction
 import org.w3c.dom.HTMLElement
 
 fun TagConsumer<HTMLElement>.createCharacterCreationForm() {
@@ -74,6 +75,17 @@ private fun TagConsumer<HTMLElement>.createTalentSection() {
     classes = setOf("subtitle has-text-centered")
     +"Talente"
   }
+
+  button {
+    classes = setOf("button")
+    span {
+      classes = setOf("icon is-small")
+      i { classes = setOf("fas fa-plus") }
+    }
+
+    onClickFunction = { }
+  }
+
   table {
     classes = setOf("table is-bordered is-striped")
     thead {
