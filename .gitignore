@@ -5,3 +5,5 @@
 */build
 /build
 /aws/node_modules
+
+aws/cdk.out
