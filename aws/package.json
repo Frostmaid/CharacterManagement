@@ -23,6 +23,6 @@
     "@aws-cdk/aws-ecs-patterns": "*",
     "@aws-cdk/aws-rds": "*",
     "@aws-cdk/core": "*",
-    "aws-cdk": "^1.19.0"
+    "aws-cdk": "^1.174.0"
   }
 }
